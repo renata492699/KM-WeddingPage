@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klára &amp; Matěj – Svatba 2026</title>
+  <meta name="description" content="Srdečně vás zveme na naši svatbu. 13. června 2026.">
+
+  <!-- Preload hero image for faster LCP -->
+  <link rel="preload" as="image" href="assets/header-photo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plh7eqjKlal8RVqyvYHdCDp9Z9eeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <a href="#home" class="nav-logo">K <span>&amp;</span> M</a>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#home" class="active" aria-current="page">Domů</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#info">Informace</a></li>
+      <li><a href="#rsvp">Potvrdit účast</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-links">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="home" aria-label="Uvítací sekce">
+    <div class="hero-content">
+      <p class="hero-ornament">Srdečně vás zveme</p>
+
+      <h1 class="hero-names">
+        Klára <span class="amp">&amp;</span> Matěj
+      </h1>
+
+      <p class="hero-date">13. června 2026</p>
+      <p class="hero-venue">
+        <!-- Doplňte název místa konání -->
+        Název místa konání · Město
+      </p>
+
+      <!-- Countdown -->
+      <div class="countdown" id="countdown" aria-label="Odpočet do svatby">
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-days">–</span>
+          <span class="countdown-label">Dní</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-hours">–</span>
+          <span class="countdown-label">Hodin</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-minutes">–</span>
+          <span class="countdown-label">Minut</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-seconds">–</span>
+          <span class="countdown-label">Sekund</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#gallery" class="hero-scroll" aria-label="Přejít na galerii">
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </a>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       QUOTE / SHORT TEXT
+  ══════════════════════════════════════ -->
+  <section id="quote" aria-label="Citát">
+    <blockquote class="quote-text">
+      <!-- Sem vložte váš citát nebo krátký text -->
+      „Největší štěstí v životě je jistota, že jste milováni."
+    </blockquote>
+    <p class="quote-author">— Victor Hugo</p>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       BRIDE & GROOM
+  ══════════════════════════════════════ -->
+  <section id="couple" aria-labelledby="couple-title">
+    <div class="section-header text-center">
+      <span class="section-tag">Seznamte se</span>
+      <h2 class="section-title" id="couple-title">Nevěsta <em>&amp;</em> Ženich</h2>
+    </div>
+
+    <div class="couple-grid">
+
+      <!-- Bride -->
+      <div class="couple-card">
+        <div class="couple-photo-wrap">
+          <!--
+            Doplňte fotografii nevěsty:
+            Nahraďte src za cestu k fotografii, např. assets/klara.jpg
+          -->
+          <img
+            src="assets/header-envelope.png"
+            alt="Fotografie nevěsty Kláry"
+            class="couple-photo"
+            loading="lazy"
+          >
+        </div>
+        <h3 class="couple-name">Klára</h3>
+        <p class="couple-bio">
+          <!-- Krátký text o nevěstě — pár vět -->
+          Sem napište krátké představení nevěsty. Co má ráda, čím se zabývá, co ji vystihuje.
+        </p>
+      </div>
+
+      <!-- Groom -->
+      <div class="couple-card">
+        <div class="couple-photo-wrap">
+          <!--
+            Doplňte fotografii ženicha:
+            Nahraďte src za cestu k fotografii, např. assets/matej.jpg
+          -->
+          <img
+            src="assets/header-envelope.png"
+            alt="Fotografie ženicha Matěje"
+            class="couple-photo"
+            loading="lazy"
+          >
+        </div>
+        <h3 class="couple-name">Matěj</h3>
+        <p class="couple-bio">
+          <!-- Krátký text o ženichovi — pár vět -->
+          Sem napište krátké představení ženicha. Co má rád, čím se zabývá, co ho vystihuje.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       GALLERY
+  ══════════════════════════════════════ -->
+  <section id="gallery" aria-labelledby="gallery-title">
+    <div class="section-header">
+      <span class="section-tag">Galerie</span>
+      <h2 class="section-title" id="gallery-title">Naše společné <em>momenty</em></h2>
+      <p class="section-subtitle">Fotografie přibydou brzy. Těšíme se, že je s vámi budeme sdílet.</p>
+    </div>
+
+    <!-- ──────────────────────────────────────────────────────────────
+         JAK PŘIDAT VLASTNÍ FOTOGRAFIE:
+         1. Vložte soubory (foto-1.jpg, foto-2.jpg, …) do složky assets/gallery/
+         2. Nahraďte každý <div class="gallery-placeholder"> níže za:
+
+           <figure tabindex="0" role="button" aria-label="Fotografie [číslo]">
+             <img src="assets/gallery/foto-X.jpg" alt="Popis fotografie" loading="lazy">
+           </figure>
+
+         3. Smažte tuto sekci komentářů
+    ────────────────────────────────────────────────────────────────── -->
+    <div class="gallery-grid" id="gallery-grid">
+        <figure tabindex="0" role="button" aria-label="Fotografie 1 — přejeďte myší pro živou verzi" class="live-photo">
+          <img src="assets/gallery/foto-1.JPEG" alt="Popis fotografie" loading="lazy">
+          <video
+            src="assets/gallery/video-1.MOV"
+            muted
+            loop
+            playsinline
+            preload="none"
+            aria-hidden="true"
+          ></video>
+          <span class="live-badge" aria-hidden="true">
+            <i class="fa-solid fa-circle-play"></i> LIVE
+          </span>
+        </figure>
+      <div class="gallery-placeholder" aria-hidden="true">
+        <i class="fa-regular fa-image"></i>
+        <span>Fotografie přijdou brzy</span>
+      </div>
+      <div class="gallery-placeholder" aria-hidden="true">
+        <i class="fa-regular fa-image"></i>
+        <span>Fotografie přijdou brzy</span>
+      </div>
+      <div class="gallery-placeholder" aria-hidden="true">
+        <i class="fa-regular fa-image"></i>
+        <span>Fotografie přijdou brzy</span>
+      </div>
+      <div class="gallery-placeholder" aria-hidden="true">
+        <i class="fa-regular fa-image"></i>
+        <span>Fotografie přijdou brzy</span>
+      </div>
+      <div class="gallery-placeholder" aria-hidden="true">
+        <i class="fa-regular fa-image"></i>
+        <span>Fotografie přijdou brzy</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       INFO
+  ══════════════════════════════════════ -->
+  <section id="info" aria-labelledby="info-title">
+    <div class="section-header">
+      <span class="section-tag">Informace</span>
+      <h2 class="section-title" id="info-title">Vše, co <em>potřebujete vědět</em></h2>
+    </div>
+
+    <div class="info-grid">
+
+      <!-- Schedule card -->
+      <div class="info-card">
+        <h3 class="info-card-title">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          Harmonogram dne
+        </h3>
+        <div class="timeline" role="list">
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time">14:00</div>
+              <div class="timeline-event">
+                <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+                Příjezd hostů
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time">15:00</div>
+              <div class="timeline-event">
+                <i class="fa-solid fa-ring" aria-hidden="true"></i>
+                Obřad
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time">16:00</div>
+              <div class="timeline-event">
+                <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+                Přípitky &amp; pohoštění
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time">18:00</div>
+              <div class="timeline-event">
+                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                Slavnostní večeře
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time">20:00</div>
+              <div class="timeline-event">
+                <i class="fa-solid fa-music" aria-hidden="true"></i>
+                Tanec &amp; oslava
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Venue card -->
+      <div class="info-card">
+        <h3 class="info-card-title">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          Místo konání
+        </h3>
+
+        <!-- Ceremony -->
+        <div class="venue-block">
+          <div class="venue-badge">
+            <i class="fa-solid fa-church" aria-hidden="true"></i>
+            Obřad
+          </div>
+          <div class="venue-address">
+            <strong><!-- Název kostela / místa obřadu --></strong>
+            Ulice 123<br>
+            000 00 Město<br>
+            Česká republika
+          </div>
+          <a
+            href="https://maps.google.com/?q=ADRESA+OBŘADU"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sage"
+            aria-label="Otevřít místo obřadu v Google Maps (otevře se v novém okně)"
+          >
+            <i class="fa-solid fa-map" aria-hidden="true"></i>
+            Otevřít v Google Maps
+          </a>
+        </div>
+
+        <div class="venue-divider"></div>
+
+        <!-- Party -->
+        <div class="venue-block">
+          <div class="venue-badge">
+            <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+            Oslava
+          </div>
+          <div class="venue-address">
+            <strong><!-- Název místa oslavy --></strong>
+            Ulice 456<br>
+            000 00 Město<br>
+            Česká republika
+          </div>
+          <a
+            href="https://maps.google.com/?q=ADRESA+OSLAVY"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sage"
+            aria-label="Otevřít místo oslavy v Google Maps (otevře se v novém okně)"
+          >
+            <i class="fa-solid fa-map" aria-hidden="true"></i>
+            Otevřít v Google Maps
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Accommodation card -->
+      <div class="info-card wide">
+        <h3 class="info-card-title">
+          <i class="fa-solid fa-bed" aria-hidden="true"></i>
+          Ubytování
+        </h3>
+        <p class="accom-intro">
+          Pro vaše pohodlí jsme vybrali několik možností ubytování v okolí. Doporučujeme rezervovat co nejdříve.
+        </p>
+        <div class="accom-grid">
+
+          <div class="accom-item">
+            <div class="accom-name">Hotel U Zlatého lva</div>
+            <div class="accom-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Náměstí 1, Město — 2 km od místa oslavy</div>
+            <div class="accom-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i> +420 123 456 789</div>
+            <div class="accom-detail"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Při rezervaci uveďte heslo „Klára a Matěj" pro skupinovou slevu.</div>
+          </div>
+
+          <div class="accom-item">
+            <div class="accom-name">Penzion Na Kopci</div>
+            <div class="accom-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Kopecká 42, Město — 3 km od místa oslavy</div>
+            <div class="accom-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i> +420 987 654 321</div>
+            <div class="accom-detail"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Rodinný penzion, snídaně v ceně, volná kapacita 10 pokojů.</div>
+          </div>
+
+          <div class="accom-item">
+            <div class="accom-name">Kemp Zelený háj</div>
+            <div class="accom-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Lesní cesta 5, Město — 1 km od místa oslavy</div>
+            <div class="accom-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i> +420 111 222 333</div>
+            <div class="accom-detail"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Karavany a chatky k dispozici, vhodné pro rodiny s dětmi.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dress code card -->
+      <div class="info-card wide">
+        <h3 class="info-card-title">
+          <i class="fa-solid fa-shirt" aria-hidden="true"></i>
+          Dress code
+        </h3>
+        <div class="dresscode-grid">
+
+          <div class="dresscode-item">
+            <div class="dresscode-icon">
+              <i class="fa-solid fa-palette" aria-hidden="true"></i>
+            </div>
+            <div>
+              <div class="dresscode-label">Téma</div>
+              <div class="dresscode-desc">Zelená — přivítáme všechny odstíny zelené. Ať už šalvějová, olivová, smaragdová nebo mátová.</div>
+            </div>
+          </div>
+
+          <div class="dresscode-item">
+            <div class="dresscode-icon">
+              <i class="fa-solid fa-church" aria-hidden="true"></i>
+            </div>
+            <div>
+              <div class="dresscode-label">Obřad v kostele</div>
+              <div class="dresscode-desc">Prosíme o slušné oblečení — zakrytá ramena a kolena.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Links card -->
+      <div class="info-card wide">
+        <h3 class="info-card-title">
+          <i class="fa-solid fa-link" aria-hidden="true"></i>
+          Užitečné odkazy
+        </h3>
+        <div class="link-list">
+
+          <!-- Gift registry -->
+          <a
+            href="https://ODKAZ-NA-SEZNAM-PŘÁNÍ"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-item"
+            aria-label="Otevřít seznam přání (otevře se v novém okně)"
+          >
+            <i class="fa-solid fa-gift" aria-hidden="true"></i>
+            <span>Seznam přání</span>
+            <i class="fa-solid fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
+          </a>
+
+          <!-- External RSVP form -->
+          <a
+            href="https://ODKAZ-NA-ONLINE-FORMULAR"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-item"
+            aria-label="Otevřít online formulář (otevře se v novém okně)"
+          >
+            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+            <span>Online formulář účasti</span>
+            <i class="fa-solid fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       RSVP
+  ══════════════════════════════════════ -->
+  <section id="rsvp" aria-labelledby="rsvp-title">
+    <div class="section-header">
+      <span class="section-tag">Potvrdit účast</span>
+      <h2 class="section-title" id="rsvp-title">Potvrzení <em>účasti</em></h2>
+      <p class="section-subtitle">
+        Prosíme o potvrzení účasti do <strong>1. května 2026</strong>.
+        Vyplňte prosím formulář níže.
+      </p>
+    </div>
+
+    <div class="rsvp-container">
+
+      <!--
+        NASTAVENÍ FORMSPREE:
+        1. Vytvořte bezplatný účet na formspree.io
+        2. Vytvořte nový formulář a zadejte svůj e-mail
+        3. Nahraďte "YOUR_FORM_ID" níže vašim ID formuláře (vypadá jako "xyzabcde")
+      -->
+      <form
+        class="rsvp-form"
+        id="rsvp-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        novalidate
+      >
+        <!-- Anti-spam honeypot (skryté pole, nevyplňujte) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <!-- Předmět e-mailu -->
+        <input type="hidden" name="_subject" value="Nová RSVP odpověď – Klára & Matěj">
+
+        <!-- Jméno -->
+        <div class="form-group">
+          <label class="form-label" for="rsvp-name">Jméno a příjmení</label>
+          <input
+            class="form-input"
+            type="text"
+            id="rsvp-name"
+            name="name"
+            placeholder="Jana Nováková"
+            required
+            autocomplete="name"
+          >
+        </div>
+
+        <!-- E-mail -->
+        <div class="form-group">
+          <label class="form-label" for="rsvp-email">E-mail</label>
+          <input
+            class="form-input"
+            type="email"
+            id="rsvp-email"
+            name="email"
+            placeholder="jana@example.com"
+            required
+            autocomplete="email"
+          >
+          <!-- Reply-to: formulář odpovídá na e-mail hosta -->
+          <input type="hidden" name="_replyto" id="rsvp-replyto" value="">
+        </div>
+
+        <!-- Účast -->
+        <div class="form-group">
+          <span class="form-label" id="attendance-label">Přijdete?</span>
+          <div class="attendance-toggle" role="radiogroup" aria-labelledby="attendance-label">
+            <input type="radio" id="att-yes" name="attendance" value="Ano, přijdu" required>
+            <label for="att-yes">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              Ano, přijdu
+            </label>
+            <input type="radio" id="att-no" name="attendance" value="Bohužel nemohu přijít">
+            <label for="att-no">
+              <i class="fa-regular fa-face-sad-tear" aria-hidden="true"></i>
+              Bohužel nemohu
+            </label>
+          </div>
+        </div>
+
+        <!-- Počet hostů (zobrazí se jen při "Ano") -->
+        <div class="form-group guest-count" id="guest-count-group">
+          <label class="form-label" for="rsvp-guests">Počet dospělých hostů (včetně vás)</label>
+          <input
+            class="form-input"
+            type="number"
+            id="rsvp-guests"
+            name="guests"
+            min="1"
+            max="8"
+            value="1"
+            placeholder="1"
+          >
+        </div>
+
+        <!-- Zpráva / dietní požadavky -->
+        <div class="form-group">
+          <label class="form-label" for="rsvp-message">Dietní požadavky nebo zpráva (nepovinné)</label>
+          <textarea
+            class="form-textarea"
+            id="rsvp-message"
+            name="message"
+            placeholder="Např. vegetariánská strava, alergie na lepek…"
+          ></textarea>
+        </div>
+
+        <!-- Odeslat -->
+        <button type="submit" class="btn-submit" id="rsvp-submit">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          Odeslat potvrzení
+        </button>
+      </form>
+
+      <!-- Zpráva po odeslání (úspěch) -->
+      <div class="rsvp-message success" id="rsvp-success" aria-live="polite" hidden>
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Děkujeme!</h3>
+        <p>Vaše odpověď byla úspěšně odeslána. Těšíme se na vás!</p>
+      </div>
+
+      <!-- Zpráva po odeslání (chyba) -->
+      <div class="rsvp-message error" id="rsvp-error" aria-live="polite" hidden>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h3>Něco se pokazilo</h3>
+        <p>
+          Formulář se nepodařilo odeslat. Zkuste to prosím znovu, nebo nám napište přímo na
+          <!-- Doplňte svůj e-mail -->
+          <a href="mailto:VAS-EMAIL@example.com" style="color: var(--sage-dark);">VAS-EMAIL@example.com</a>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-names">Klára &amp; Matěj</div>
+    <div class="footer-date">13. června 2026</div>
+    <div class="footer-links">
+      <!-- Doplňte odkaz na e-mail nebo Instagram -->
+      <a href="mailto:VAS-EMAIL@example.com" aria-label="Napište nám e-mail">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
+      <!-- <a href="https://instagram.com/VASE-JMENO" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a> -->
+    </div>
+    <div class="footer-copy">
+      Klára &amp; Matěj · 2026 · Made with <span aria-label="love">♥</span>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════
+       LIGHTBOX (for gallery)
+  ══════════════════════════════════════ -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Prohlížeč fotografií">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Zavřít">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <button class="lightbox-btn prev" id="lightbox-prev" aria-label="Předchozí fotografie">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <img src="" alt="" id="lightbox-img">
+    <button class="lightbox-btn next" id="lightbox-next" aria-label="Další fotografie">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
