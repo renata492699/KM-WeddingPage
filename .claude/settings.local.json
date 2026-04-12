@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /c/Users/urban/source/repos/KM-WeddingPage log --oneline)",
+      "Bash(git -C /c/Users/urban/source/repos/KM-WeddingPage log --format=fuller)",
+      "Bash(git -C /c/Users/urban/source/repos/KM-WeddingPage show --stat HEAD)",
+      "Bash(git -C /c/Users/urban/source/repos/KM-WeddingPage show HEAD:page/index.html)",
+      "Bash(git -C /c/Users/urban/source/repos/KM-WeddingPage log --oneline -10)"
+    ]
+  }
+}

@@ -238,12 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ─── 4. RSVP FORM ─── */
 
-  const rsvpForm    = document.getElementById('rsvp-form');
-  const rsvpSuccess = document.getElementById('rsvp-success');
-  const rsvpError   = document.getElementById('rsvp-error');
-  const rsvpSubmit  = document.getElementById('rsvp-submit');
-  const guestGroup  = document.getElementById('guest-count-group');
-  const emailInput  = document.getElementById('rsvp-email');
+  const rsvpForm      = document.getElementById('rsvp-form');
+  const rsvpSuccess   = document.getElementById('rsvp-success');
+  const rsvpError     = document.getElementById('rsvp-error');
+  const rsvpSubmit    = document.getElementById('rsvp-submit');
+  const rsvpSubtitle  = document.getElementById('rsvp-subtitle');
+  const rsvpAnother   = document.getElementById('rsvp-another');
+  const guestGroup    = document.getElementById('guest-count-group');
+  const emailInput    = document.getElementById('rsvp-email');
   const replyToHidden = document.getElementById('rsvp-replyto');
 
   // Sync hidden _replyto with email field
@@ -261,6 +263,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (!rsvpForm) return;
+
+  rsvpAnother.addEventListener('click', () => {
+    rsvpSuccess.hidden = true;
+    rsvpSubtitle.hidden = false;
+    rsvpSubmit.disabled = false;
+    rsvpSubmit.innerHTML = '<i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Odeslat potvrzení';
+    rsvpForm.hidden = false;
+    rsvpForm.querySelector('#rsvp-name').focus();
+  });
 
   rsvpForm.addEventListener('submit', async e => {
     e.preventDefault();
@@ -291,7 +302,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (res.ok) {
+        rsvpForm.reset();
+        guestGroup.classList.remove('visible');
         rsvpForm.hidden = true;
+        rsvpSubtitle.hidden = true;
         rsvpSuccess.hidden = false;
         rsvpSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {

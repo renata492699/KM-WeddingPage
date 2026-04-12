@@ -922,7 +922,7 @@ a {
   margin: 0 auto;
 }
 
-.rsvp-form {
+.rsvp-form:not([hidden]) {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -1053,6 +1053,26 @@ a {
   font-size: 1rem;
 }
 
+.btn-another {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: transparent;
+  border: 2px solid var(--sage-dark);
+  border-radius: 9999px;
+  color: var(--sage-dark);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-another:hover {
+  background: var(--sage-dark);
+  color: #fff;
+}
+
 /* RSVP success / error */
 .rsvp-message {
   display: none;
@@ -1062,12 +1082,12 @@ a {
   margin-top: 8px;
 }
 
-.rsvp-message.success {
+.rsvp-message:not([hidden]).success {
   background: var(--sage-light);
   display: block;
 }
 
-.rsvp-message.error {
+.rsvp-message:not([hidden]).error {
   background: #fff5f5;
   display: block;
 }

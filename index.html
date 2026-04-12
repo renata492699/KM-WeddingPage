@@ -6,6 +6,8 @@
   <title>Klára &amp; Matěj – Svatba 2026</title>
   <meta name="description" content="Srdečně vás zveme na naši svatbu. 13. června 2026.">
 
+  <link rel="icon" type="image/png" href="assets/icons8-wedding-rings-50.png">
+
   <!-- Preload hero image for faster LCP -->
   <link rel="preload" as="image" href="assets/header-photo.jpg">
 
@@ -89,10 +91,9 @@
   ══════════════════════════════════════ -->
   <section id="quote" aria-label="Citát">
     <blockquote class="quote-text">
-      <!-- Sem vložte váš citát nebo krátký text -->
-      „Největší štěstí v životě je jistota, že jste milováni."
+      „Milovat neznamená hledět jeden do druhého, ale pohlížet společně jedním směrem."
     </blockquote>
-    <p class="quote-author">— Victor Hugo</p>
+    <p class="quote-author">— Antoine de Saint-Exupéry</p>
   </section>
 
 
@@ -124,7 +125,7 @@
         <h3 class="couple-name">Klára</h3>
         <p class="couple-bio">
           <!-- Krátký text o nevěstě — pár vět -->
-          Sem napište krátké představení nevěsty. Co má ráda, čím se zabývá, co ji vystihuje.
+          Krátké představení nevěsty.
         </p>
       </div>
 
@@ -145,7 +146,7 @@
         <h3 class="couple-name">Matěj</h3>
         <p class="couple-bio">
           <!-- Krátký text o ženichovi — pár vět -->
-          Sem napište krátké představení ženicha. Co má rád, čím se zabývá, co ho vystihuje.
+          Krátké představení ženicha.
         </p>
       </div>
 
@@ -419,7 +420,7 @@
 
           <!-- Gift registry -->
           <a
-            href="https://ODKAZ-NA-SEZNAM-PŘÁNÍ"
+            href="https://docs.google.com/spreadsheets/d/1pY-gYr-7p2DFW04rmUSjIwgCR2fI-aM7wGN7cMTFN2o/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             class="link-item"
@@ -430,18 +431,6 @@
             <i class="fa-solid fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
           </a>
 
-          <!-- External RSVP form -->
-          <a
-            href="https://ODKAZ-NA-ONLINE-FORMULAR"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-item"
-            aria-label="Otevřít online formulář (otevře se v novém okně)"
-          >
-            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
-            <span>Online formulář účasti</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
-          </a>
 
         </div>
       </div>
@@ -457,8 +446,8 @@
     <div class="section-header">
       <span class="section-tag">Potvrdit účast</span>
       <h2 class="section-title" id="rsvp-title">Potvrzení <em>účasti</em></h2>
-      <p class="section-subtitle">
-        Prosíme o potvrzení účasti do <strong>1. května 2026</strong>.
+      <p class="section-subtitle" id="rsvp-subtitle">
+        Prosíme o potvrzení účasti do <strong>1. června 2026</strong>.
         Vyplňte prosím formulář níže.
       </p>
     </div>
@@ -474,7 +463,7 @@
       <form
         class="rsvp-form"
         id="rsvp-form"
-        action="https://formspree.io/f/YOUR_FORM_ID"
+        action="https://formspree.io/f/mdaynzbn"
         method="POST"
         novalidate
       >
@@ -568,6 +557,10 @@
         <i class="fa-solid fa-circle-check"></i>
         <h3>Děkujeme!</h3>
         <p>Vaše odpověď byla úspěšně odeslána. Těšíme se na vás!</p>
+        <button type="button" class="btn-another" id="rsvp-another">
+          <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+          Odeslat další odpověď
+        </button>
       </div>
 
       <!-- Zpráva po odeslání (chyba) -->
