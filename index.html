@@ -16,6 +16,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Google Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0">
+
   <!-- Font Awesome 6 Free -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plh7eqjKlal8RVqyvYHdCDp9Z9eeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
@@ -54,10 +57,6 @@
       </h1>
 
       <p class="hero-date">13. června 2026</p>
-      <p class="hero-venue">
-        <!-- Doplňte název místa konání -->
-        Název místa konání · Město
-      </p>
 
       <!-- Countdown -->
       <div class="countdown" id="countdown" aria-label="Odpočet do svatby">
@@ -94,6 +93,78 @@
       „Milovat neznamená hledět jeden do druhého, ale pohlížet společně jedním směrem."
     </blockquote>
     <p class="quote-author">— Antoine de Saint-Exupéry</p>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       DETAILS (when & where)
+  ══════════════════════════════════════ -->
+  <section id="details" aria-labelledby="details-title">
+
+    <!-- Title row -->
+    <h2 class="section-title details-heading" id="details-title">Budeme rádi, když s námi náš <em>velký den</em> oslavíte</h2>
+
+    <!-- When + Where row -->
+    <div class="details-grid">
+
+      <!-- When -->
+      <div class="details-when">
+        <div class="details-when-label">
+          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+          Kdy
+        </div>
+        <div class="details-when-box">
+          <div class="details-when-value">13. června 2026</div>
+          <div class="details-when-sub">Sobota &nbsp;·&nbsp; začínáme ve 14:00</div>
+        </div>
+      </div>
+
+      <!-- Where -->
+      <div class="details-where">
+        <div class="details-where-label">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          Kde
+        </div>
+
+        <!-- Place 1 – ceremony -->
+        <div class="details-place">
+          <div class="details-place-info">
+            <div class="details-place-type">Obřad</div>
+            <div class="details-place-name"><!-- Název kostela / místa obřadu --></div>
+            <div class="details-place-addr">Ulice 123, 000 00 Město</div>
+          </div>
+          <a
+            href="https://maps.google.com/?q=ADRESA+OBRADU"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="details-map-btn"
+            aria-label="Otevřít místo obřadu v Google Maps"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">map</span>
+          </a>
+        </div>
+
+        <!-- Place 2 – party -->
+        <div class="details-place">
+          <div class="details-place-info">
+            <div class="details-place-type">Oslava</div>
+            <div class="details-place-name"><!-- Název místa oslavy --></div>
+            <div class="details-place-addr">Ulice 456, 000 00 Město</div>
+          </div>
+          <a
+            href="https://maps.google.com/?q=ADRESA+OSLAVY"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="details-map-btn"
+            aria-label="Otevřít místo oslavy v Google Maps"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">map</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
   </section>
 
 
