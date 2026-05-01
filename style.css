@@ -3,20 +3,100 @@
    Theme: sage green · sunflower yellow · white
    ═══════════════════════════════════════════════════ */
 
+/* ─── Local Fonts ─── */
+@font-face {
+  font-family: 'PaintBrush';
+  src: url('assets/fonts/PaintBrush/PaintBrushScript-Regular.woff2') format('woff2'),
+       url('assets/fonts/PaintBrush/PaintBrushScript-Regular.woff') format('woff'),
+       url('assets/fonts/PaintBrush/PaintBrushScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ─── Custom Properties ─── */
 :root {
   --sage:        #7C9A7E;
   --sage-light:  #F2F6F2;
-  --sage-dark:   #4E6B50;
+  --sage-dark:   #506B50;
   --yellow:      #E8C547;
   --yellow-dark: #C9A827;
   --white:       #FFFFFF;
-  --text:        #1A1A1A;
+  --text:        #1C1918;
   --text-muted:  #5C6B5D;
-  --overlay:     rgba(18, 28, 18, 0.44);
+  --overlay:     rgba(32, 49, 40, 0.44);
+
+  /* Section overlay backgrounds (semi-transparent so body texture shows through) */
+  --section-white:      rgba(255, 255, 255, 0.82);
+  --section-sage-light: rgba(242, 246, 242, 0.82);
+  --section-sage-dark:  rgba(80, 107, 80, 0.82);
+
+  /* White on dark backgrounds */
+  --white-85: rgba(255,255,255,0.85);
+  --white-75: rgba(255,255,255,0.75);
+  --white-65: rgba(255,255,255,0.65);
+  --white-60: rgba(255,255,255,0.6);
+  --white-55: rgba(255,255,255,0.55);
+  --white-30: rgba(255,255,255,0.3);
+  --white-20: rgba(255,255,255,0.2);
+
+
+  /* Sage alpha tints */
+  --sage-a40: rgba(124, 154, 126, 0.4);
+  --sage-a35: rgba(124, 154, 126, 0.35);
+  --sage-a30: rgba(124, 154, 126, 0.3);
+  --sage-a25: rgba(124, 154, 126, 0.25);
+  --sage-a20: rgba(124, 154, 126, 0.2);
+  --sage-a15: rgba(124, 154, 126, 0.15);
+  --sage-dark-a30: rgba(80, 107, 80, 0.3);
+
+  /* Yellow alpha tints */
+  --yellow-a85: rgba(232, 197, 71, 0.85);
+  --yellow-a35: rgba(232, 197, 71, 0.35);
+  --yellow-a18: rgba(232, 197, 71, 0.18);
+
+  /* Error state */
+  --error:    #c0392b;
+  --error-bg: #fff5f5;
+
+  --hero-image:   url('assets/ruce_ulice.JPG');
+  --texture:      url('assets/textura_výsek.jpg');
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
+  --font-script:  'PaintBrush', cursive;
 
   --nav-h:    64px;
   --radius:   12px;
@@ -41,7 +121,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text);
-  background: var(--white);
+  background: var(--white) url('assets/textura_full.jpg') top center / 100% auto repeat-y scroll;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -78,7 +158,7 @@ a {
 }
 
 .section-title em {
-  font-style: italic;
+  font-style: italic; 
   color: var(--sage-dark);
 }
 
@@ -113,9 +193,9 @@ a {
 }
 
 .nav-logo {
-  font-family: var(--font-heading);
-  font-size: 1.45rem;
-  font-weight: 700;
+  font-family: var(--font-script);
+  font-size: 1.9rem;
+  font-weight: bold;
   color: var(--sage-dark);
   letter-spacing: 0.04em;
   white-space: nowrap;
@@ -162,13 +242,13 @@ a {
 /* ─── Hero ─── */
 #home {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  height: 70vh;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('assets/header-photo.jpg');
+  background-image: var(--hero-image);
   background-size: cover;
   background-position: center;
   scroll-margin-top: 0;
@@ -195,16 +275,16 @@ a {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1rem;
-  color: rgba(255,255,255,0.65);
+  color: var(--white-65);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
 }
 
 .hero-names {
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 700;
+  font-family: var(--font-script);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: normal;
   color: var(--white);
   line-height: 1.05;
   margin-bottom: 0.5rem;
@@ -218,16 +298,17 @@ a {
 }
 
 .hero-date {
+  font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 400;
-  color: rgba(255,255,255,0.85);
+  color: var(--white-85);
   letter-spacing: 0.12em;
   margin-bottom: 0.3rem;
 }
 
 .hero-venue {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.65);
+  color: var(--white-65);
   letter-spacing: 0.06em;
   margin-bottom: 2.8rem;
 }
@@ -235,48 +316,52 @@ a {
 /* Countdown */
 .countdown {
   display: flex;
-  gap: 16px;
+  gap: 0;
   justify-content: center;
   flex-wrap: wrap;
+  background: var(--white-20);
+  border-radius: var(--radius);
+  padding: 12px 20px;
 }
 
 .countdown-box {
-  background: rgba(124, 154, 126, 0.75);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius);
-  padding: 18px 20px 14px;
-  min-width: 80px;
+  background: transparent;
+  padding: 4px 14px;
+  min-width: 64px;
   text-align: center;
-  transition: transform 0.2s;
+  border-right: 1px solid var(--white-30);
+}
+
+.countdown-box:last-child {
+  border-right: none;
 }
 
 .countdown-box:hover {
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .countdown-number {
   display: block;
   font-family: var(--font-heading);
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 400;
   color: var(--white);
   line-height: 1;
   transition: transform 0.2s, color 0.2s;
 }
 
 .countdown-number.pulse {
-  transform: scale(1.15);
+  transform: scale(1.1);
   color: var(--yellow);
 }
 
 .countdown-label {
   display: block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
+  color: var(--white-60);
   margin-top: 6px;
 }
 
@@ -287,7 +372,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  color: rgba(255,255,255,0.6);
+  color: var(--white-60);
   font-size: 1.5rem;
   animation: bounce 2s infinite;
   transition: color 0.2s;
@@ -305,7 +390,7 @@ a {
 /* ─── Couple ─── */
 #couple {
   padding: var(--section-pad);
-  background: var(--white);
+  background: var(--section-sage-light);
   scroll-margin-top: var(--nav-h);
 }
 
@@ -350,9 +435,9 @@ a {
 }
 
 .couple-name {
-  font-family: var(--font-heading);
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-family: var(--font-script);
+  font-size: 3rem;
+  font-weight: normal;
   color: var(--sage-dark);
   margin-bottom: 12px;
 }
@@ -374,7 +459,7 @@ a {
 /* ─── Gallery ─── */
 #gallery {
   padding: var(--section-pad);
-  background: var(--white);
+  background: var(--section-white);
   scroll-margin-top: var(--nav-h);
 }
 
@@ -411,17 +496,6 @@ a {
   transform: scale(1.06);
 }
 
-.gallery-grid figure::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(78, 107, 80, 0);
-  transition: background 0.3s;
-}
-
-.gallery-grid figure:hover::after {
-  background: rgba(78, 107, 80, 0.15);
-}
 
 /* Live photo */
 .gallery-grid figure.live-photo video {
@@ -467,7 +541,7 @@ a {
 }
 
 .gallery-grid figure.live-photo.playing .live-badge {
-  background: rgba(232, 197, 71, 0.85);
+  background: var(--yellow-a85);
   color: var(--text);
 }
 
@@ -476,7 +550,7 @@ a {
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   background: var(--sage-light);
-  border: 2px dashed rgba(124, 154, 126, 0.4);
+  border: 2px dashed var(--sage-a40);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -530,7 +604,7 @@ a {
   right: 24px;
   background: none;
   border: none;
-  color: rgba(255,255,255,0.75);
+  color: var(--white-75);
   font-size: 1.8rem;
   cursor: pointer;
   transition: color 0.2s;
@@ -564,7 +638,7 @@ a {
 /* ─── Info ─── */
 #info {
   padding: var(--section-pad);
-  background: var(--sage-light);
+  background: var(--section-sage-light);
   scroll-margin-top: var(--nav-h);
 }
 
@@ -628,7 +702,7 @@ a {
   top: 28px;
   bottom: -4px;
   width: 2px;
-  background: rgba(124, 154, 126, 0.25);
+  background: var(--sage-a25);
 }
 
 .timeline-dot {
@@ -750,13 +824,13 @@ a {
 }
 
 .venue-badge--yellow {
-  background: rgba(232, 197, 71, 0.18);
+  background: var(--yellow-a18);
   color: var(--yellow-dark);
 }
 
 .venue-divider {
   border: none;
-  border-top: 1.5px dashed rgba(124, 154, 126, 0.3);
+  border-top: 1.5px dashed var(--sage-a30);
   margin: 20px 0;
 }
 
@@ -888,7 +962,7 @@ a {
 }
 
 .link-item:hover {
-  background: rgba(124, 154, 126, 0.2);
+  background: var(--sage-a20);
   transform: translateX(4px);
 }
 
@@ -908,7 +982,7 @@ a {
 /* ─── RSVP ─── */
 #rsvp {
   padding: var(--section-pad);
-  background: var(--white);
+  background: var(--section-white);
   scroll-margin-top: var(--nav-h);
 }
 
@@ -945,7 +1019,7 @@ a {
 .form-input,
 .form-textarea {
   padding: 13px 16px;
-  border: 1.5px solid rgba(124, 154, 126, 0.35);
+  border: 1.5px solid var(--sage-a35);
   border-radius: 8px;
   font-family: var(--font-body);
   font-size: 1rem;
@@ -959,7 +1033,7 @@ a {
 .form-input:focus,
 .form-textarea:focus {
   border-color: var(--sage);
-  box-shadow: 0 0 0 3px rgba(124, 154, 126, 0.15);
+  box-shadow: 0 0 0 3px var(--sage-a15);
 }
 
 .form-textarea {
@@ -988,7 +1062,7 @@ a {
   gap: 8px;
   padding: 14px 12px;
   border-radius: 8px;
-  border: 1.5px solid rgba(124, 154, 126, 0.35);
+  border: 1.5px solid var(--sage-a35);
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
@@ -1046,7 +1120,7 @@ a {
 .btn-submit:hover {
   background: var(--yellow-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232, 197, 71, 0.35);
+  box-shadow: 0 6px 20px var(--yellow-a35);
 }
 
 .btn-submit i {
@@ -1070,7 +1144,7 @@ a {
 
 .btn-another:hover {
   background: var(--sage-dark);
-  color: #fff;
+  color: var(--white);
 }
 
 /* RSVP success / error */
@@ -1088,7 +1162,7 @@ a {
 }
 
 .rsvp-message:not([hidden]).error {
-  background: #fff5f5;
+  background: var(--error-bg);
   display: block;
 }
 
@@ -1099,7 +1173,7 @@ a {
 }
 
 .rsvp-message.success i { color: var(--sage-dark); }
-.rsvp-message.error i   { color: #c0392b; }
+.rsvp-message.error i   { color: var(--error); }
 
 .rsvp-message h3 {
   font-family: var(--font-heading);
@@ -1115,16 +1189,16 @@ a {
 
 /* ─── Footer ─── */
 footer {
-  background: var(--sage-dark);
-  color: rgba(255,255,255,0.85);
+  background: var(--section-sage-dark);
+  color: var(--white-85);
   text-align: center;
   padding: 48px 24px;
 }
 
 .footer-names {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-style: italic;
+  font-family: var(--font-script);
+  font-size: 2rem;
+  font-style: normal;
   color: var(--white);
   margin-bottom: 6px;
 }
@@ -1132,7 +1206,7 @@ footer {
 .footer-date {
   font-size: 0.9rem;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.6);
+  color: var(--white-60);
   margin-bottom: 24px;
 }
 
@@ -1144,7 +1218,7 @@ footer {
 }
 
 .footer-links a {
-  color: rgba(255,255,255,0.55);
+  color: var(--white-55);
   font-size: 1.2rem;
   transition: color 0.2s;
 }
@@ -1153,13 +1227,13 @@ footer {
 
 .footer-copy {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.3);
+  color: var(--white-30);
   letter-spacing: 0.05em;
 }
 
 /* ─── Quote ─── */
 #quote {
-  background: var(--sage-light);
+  background: var(--section-sage-light);
   text-align: center;
   padding: 64px 32px;
 }
@@ -1185,9 +1259,14 @@ footer {
 /* ─── Details (when & where) ─── */
 #details {
   padding: var(--section-pad);
-  background: var(--white);
+  background: var(--section-white);
+  scroll-margin-top: var(--nav-h);
+}
+
+#details > * {
   max-width: 1100px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .details-heading {

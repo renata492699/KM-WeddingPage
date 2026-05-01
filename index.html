@@ -9,12 +9,7 @@
   <link rel="icon" type="image/png" href="assets/icons8-wedding-rings-50.png">
 
   <!-- Preload hero image for faster LCP -->
-  <link rel="preload" as="image" href="assets/header-photo.jpg">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/ruce_vinice_v.JPG">
 
   <!-- Google Material Symbols -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0">
@@ -169,128 +164,10 @@
 
 
   <!-- ══════════════════════════════════════
-       BRIDE & GROOM
-  ══════════════════════════════════════ -->
-  <section id="couple" aria-labelledby="couple-title">
-    <div class="section-header text-center">
-      <span class="section-tag">Seznamte se</span>
-      <h2 class="section-title" id="couple-title">Nevěsta <em>&amp;</em> Ženich</h2>
-    </div>
-
-    <div class="couple-grid">
-
-      <!-- Bride -->
-      <div class="couple-card">
-        <div class="couple-photo-wrap">
-          <!--
-            Doplňte fotografii nevěsty:
-            Nahraďte src za cestu k fotografii, např. assets/klara.jpg
-          -->
-          <img
-            src="assets/header-envelope.png"
-            alt="Fotografie nevěsty Kláry"
-            class="couple-photo"
-            loading="lazy"
-          >
-        </div>
-        <h3 class="couple-name">Klára</h3>
-        <p class="couple-bio">
-          <!-- Krátký text o nevěstě — pár vět -->
-          Krátké představení nevěsty.
-        </p>
-      </div>
-
-      <!-- Groom -->
-      <div class="couple-card">
-        <div class="couple-photo-wrap">
-          <!--
-            Doplňte fotografii ženicha:
-            Nahraďte src za cestu k fotografii, např. assets/matej.jpg
-          -->
-          <img
-            src="assets/header-envelope.png"
-            alt="Fotografie ženicha Matěje"
-            class="couple-photo"
-            loading="lazy"
-          >
-        </div>
-        <h3 class="couple-name">Matěj</h3>
-        <p class="couple-bio">
-          <!-- Krátký text o ženichovi — pár vět -->
-          Krátké představení ženicha.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════
-       GALLERY
-  ══════════════════════════════════════ -->
-  <section id="gallery" aria-labelledby="gallery-title">
-    <div class="section-header">
-      <span class="section-tag">Galerie</span>
-      <h2 class="section-title" id="gallery-title">Naše společné <em>momenty</em></h2>
-      <p class="section-subtitle">Fotografie přibydou brzy. Těšíme se, že je s vámi budeme sdílet.</p>
-    </div>
-
-    <!-- ──────────────────────────────────────────────────────────────
-         JAK PŘIDAT VLASTNÍ FOTOGRAFIE:
-         1. Vložte soubory (foto-1.jpg, foto-2.jpg, …) do složky assets/gallery/
-         2. Nahraďte každý <div class="gallery-placeholder"> níže za:
-
-           <figure tabindex="0" role="button" aria-label="Fotografie [číslo]">
-             <img src="assets/gallery/foto-X.jpg" alt="Popis fotografie" loading="lazy">
-           </figure>
-
-         3. Smažte tuto sekci komentářů
-    ────────────────────────────────────────────────────────────────── -->
-    <div class="gallery-grid" id="gallery-grid">
-        <figure tabindex="0" role="button" aria-label="Fotografie 1 — přejeďte myší pro živou verzi" class="live-photo">
-          <img src="assets/gallery/foto-1.JPEG" alt="Popis fotografie" loading="lazy">
-          <video
-            src="assets/gallery/video-1.MOV"
-            muted
-            loop
-            playsinline
-            preload="none"
-            aria-hidden="true"
-          ></video>
-          <span class="live-badge" aria-hidden="true">
-            <i class="fa-solid fa-circle-play"></i> LIVE
-          </span>
-        </figure>
-      <div class="gallery-placeholder" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Fotografie přijdou brzy</span>
-      </div>
-      <div class="gallery-placeholder" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Fotografie přijdou brzy</span>
-      </div>
-      <div class="gallery-placeholder" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Fotografie přijdou brzy</span>
-      </div>
-      <div class="gallery-placeholder" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Fotografie přijdou brzy</span>
-      </div>
-      <div class="gallery-placeholder" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Fotografie přijdou brzy</span>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════
        INFO
   ══════════════════════════════════════ -->
   <section id="info" aria-labelledby="info-title">
     <div class="section-header">
-      <span class="section-tag">Informace</span>
       <h2 class="section-title" id="info-title">Vše, co <em>potřebujete vědět</em></h2>
     </div>
 
@@ -515,7 +392,6 @@
   ══════════════════════════════════════ -->
   <section id="rsvp" aria-labelledby="rsvp-title">
     <div class="section-header">
-      <span class="section-tag">Potvrdit účast</span>
       <h2 class="section-title" id="rsvp-title">Potvrzení <em>účasti</em></h2>
       <p class="section-subtitle" id="rsvp-subtitle">
         Prosíme o potvrzení účasti do <strong>1. června 2026</strong>.
@@ -645,6 +521,116 @@
         </p>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       BRIDE & GROOM
+  ══════════════════════════════════════ -->
+  <section id="couple" aria-labelledby="couple-title">
+    <div class="section-header text-center">
+      <h2 class="section-title" id="couple-title">Nevěsta <em>&amp;</em> Ženich</h2>
+    </div>
+
+    <div class="couple-grid">
+
+      <!-- Bride -->
+      <div class="couple-card">
+        <div class="couple-photo-wrap">
+          <!--
+            Doplňte fotografii nevěsty:
+            Nahraďte src za cestu k fotografii, např. assets/klara.jpg
+          -->
+          <img
+            src="assets/gallery/bride.png"
+            alt="Fotografie nevěsty Kláry"
+            class="couple-photo"
+            loading="lazy"
+          >
+        </div>
+        <h3 class="couple-name">Klára</h3>
+        <p class="couple-bio">
+          <!-- Krátký text o nevěstě — pár vět -->
+          Krátké představení nevěsty.
+        </p>
+      </div>
+
+      <!-- Groom -->
+      <div class="couple-card">
+        <div class="couple-photo-wrap">
+          <!--
+            Doplňte fotografii ženicha:
+            Nahraďte src za cestu k fotografii, např. assets/matej.jpg
+          -->
+          <img
+            src="assets/gallery/groom_v.jpg"
+            alt="Fotografie ženicha Matěje"
+            class="couple-photo"
+            loading="lazy"
+          >
+        </div>
+        <h3 class="couple-name">Matěj</h3>
+        <p class="couple-bio">
+          <!-- Krátký text o ženichovi — pár vět -->
+          Krátké představení ženicha.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       GALLERY
+  ══════════════════════════════════════ -->
+  <section id="gallery" aria-labelledby="gallery-title">
+    <div class="section-header">
+      <h2 class="section-title" id="gallery-title">Naše společné <em>momenty</em></h2>
+    </div>
+
+    <!-- ──────────────────────────────────────────────────────────────
+         JAK PŘIDAT VLASTNÍ FOTOGRAFIE:
+         1. Vložte soubory (foto-1.jpg, foto-2.jpg, …) do složky assets/gallery/
+         2. Nahraďte každý <div class="gallery-placeholder"> níže za:
+
+           <figure tabindex="0" role="button" aria-label="Fotografie [číslo]">
+             <img src="assets/gallery/foto-X.jpg" alt="Popis fotografie" loading="lazy">
+           </figure>
+
+         3. Smažte tuto sekci komentářů
+    ────────────────────────────────────────────────────────────────── -->
+    <div class="gallery-grid" id="gallery-grid">
+        <figure tabindex="0" role="button" aria-label="Fotografie 1">
+          <img src="assets/gallery/foto-1.JPG" alt="Společné foto 1" loading="lazy">
+        </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 2 — přejeďte myší pro živou verzi" class="live-photo">
+          <img src="assets/gallery/foto-2.JPEG" alt="Společné foto 2" loading="lazy">
+          <video
+            src="assets/gallery/video-2.MOV"
+            muted
+            loop
+            playsinline
+            preload="none"
+            aria-hidden="true"
+          ></video>
+          <span class="live-badge" aria-hidden="true">
+            <i class="fa-solid fa-circle-play"></i> LIVE
+          </span>
+        </figure>
+        <figure tabindex="0" role="button" aria-label="Fotografie 3">
+          <img src="assets/gallery/foto-3.jpg" alt="Společné foto 3" loading="lazy">
+        </figure>
+       <figure tabindex="0" role="button" aria-label="Fotografie 4">
+          <img src="assets/gallery/foto-4.jpg" alt="Společné foto 4" loading="lazy">
+        </figure>
+       <figure tabindex="0" role="button" aria-label="Fotografie 5">
+          <img src="assets/gallery/foto-5.jpg" alt="Společné foto 5" loading="lazy">
+        </figure>
+      <div class="gallery-placeholder" aria-hidden="true">
+        <i class="fa-regular fa-image"></i>
+        <span>Fotografie přijdou brzy</span>
+      </div>
     </div>
   </section>
 
