@@ -1493,3 +1493,12 @@ footer {
     font-size: 1.6rem;
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('assets/textura_výsek.jpg');
+    background-size: 200% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+  }
+}
