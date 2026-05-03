@@ -367,18 +367,10 @@
         <div class="link-list">
 
           <!-- Gift registry -->
-          <a
-            href="https://docs.google.com/spreadsheets/d/1pY-gYr-7p2DFW04rmUSjIwgCR2fI-aM7wGN7cMTFN2o/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-item"
-            aria-label="Otevřít seznam přání (otevře se v novém okně)"
-          >
-            <i class="fa-solid fa-gift" aria-hidden="true"></i>
-            <span>Seznam přání</span>
-            <i class="fa-solid fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
-          </a>
-
+          <div id="gifts-wrap" class="gifts-wrap">
+            <p class="gifts-desc">Pokud nám chcete udělat radost, vyberte dárek ze seznamu a rezervujte ho svým jménem, aby ho nikdo jiný nevybral.</p>
+            <div id="gifts-list" class="gifts-list"></div>
+          </div>
 
         </div>
       </div>
@@ -673,6 +665,7 @@
   </div>
 
 
+  <script src="gifts.js" defer></script>
   <script src="main.js"></script>
 </body>
 </html>
