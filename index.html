@@ -125,15 +125,15 @@
         <div class="details-place">
           <div class="details-place-info">
             <div class="details-place-type">Obřad</div>
-            <div class="details-place-name"><!-- Název kostela / místa obřadu --></div>
-            <div class="details-place-addr">Ulice 123, 000 00 Město</div>
+            <div class="details-place-name">Kostel Nanebevzetí Panny Marie</div>
+            <div class="details-place-addr">Bartošovice v Orlických horách, Česko</div>
           </div>
           <a
-            href="https://maps.google.com/?q=ADRESA+OBRADU"
+            href="https://mapy.com/s/pocedahano"
             target="_blank"
             rel="noopener noreferrer"
             class="details-map-btn"
-            aria-label="Otevřít místo obřadu v Google Maps"
+            aria-label="Otevřít místo obřadu v Mapy.cz"
           >
             <span class="material-symbols-outlined" aria-hidden="true">map</span>
           </a>
@@ -143,15 +143,15 @@
         <div class="details-place">
           <div class="details-place-info">
             <div class="details-place-type">Oslava</div>
-            <div class="details-place-name"><!-- Název místa oslavy --></div>
-            <div class="details-place-addr">Ulice 456, 000 00 Město</div>
+            <div class="details-place-name">Orel jednota</div>
+            <div class="details-place-addr">Dolní Čermná 220, 561 53 Dolní Čermná</div>
           </div>
           <a
-            href="https://maps.google.com/?q=ADRESA+OSLAVY"
+            href="https://mapy.com/s/jehajaneda"
             target="_blank"
             rel="noopener noreferrer"
             class="details-map-btn"
-            aria-label="Otevřít místo oslavy v Google Maps"
+            aria-label="Otevřít místo oslavy v Mapy.cz"
           >
             <span class="material-symbols-outlined" aria-hidden="true">map</span>
           </a>
@@ -172,6 +172,37 @@
     </div>
 
     <div class="info-grid">
+
+      <!-- Dress code card -->
+      <div class="info-card wide">
+        <h3 class="info-card-title">
+          <i class="fa-solid fa-shirt" aria-hidden="true"></i>
+          Dress code
+        </h3>
+        <div class="dresscode-grid">
+
+          <div class="dresscode-item">
+            <div class="dresscode-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">church</span>
+            </div>
+            <div>
+              <div class="dresscode-label">Obřad v kostele</div>
+              <div class="dresscode-desc">Prosíme o slušné oblečení — zakrytá ramena a kolena.</div>
+            </div>
+          </div>
+
+          <div class="dresscode-item">
+            <div class="dresscode-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">eco</span>
+            </div>
+            <div>
+              <div class="dresscode-label">Téma</div>
+              <div class="dresscode-desc">Sage — a jakékoliv jiné odstíny zelené.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
       <!-- Schedule card -->
       <div class="info-card">
@@ -233,143 +264,52 @@
         </div>
       </div>
 
-      <!-- Venue card -->
-      <div class="info-card">
-        <h3 class="info-card-title">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-          Místo konání
-        </h3>
-
-        <!-- Ceremony -->
-        <div class="venue-block">
-          <div class="venue-badge">
-            <i class="fa-solid fa-church" aria-hidden="true"></i>
-            Obřad
-          </div>
-          <div class="venue-address">
-            <strong><!-- Název kostela / místa obřadu --></strong>
-            Ulice 123<br>
-            000 00 Město<br>
-            Česká republika
-          </div>
-          <a
-            href="https://maps.google.com/?q=ADRESA+OBŘADU"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-sage"
-            aria-label="Otevřít místo obřadu v Google Maps (otevře se v novém okně)"
-          >
-            <i class="fa-solid fa-map" aria-hidden="true"></i>
-            Otevřít v Google Maps
-          </a>
-        </div>
-
-        <div class="venue-divider"></div>
-
-        <!-- Party -->
-        <div class="venue-block">
-          <div class="venue-badge">
-            <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
-            Oslava
-          </div>
-          <div class="venue-address">
-            <strong><!-- Název místa oslavy --></strong>
-            Ulice 456<br>
-            000 00 Město<br>
-            Česká republika
-          </div>
-          <a
-            href="https://maps.google.com/?q=ADRESA+OSLAVY"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-sage"
-            aria-label="Otevřít místo oslavy v Google Maps (otevře se v novém okně)"
-          >
-            <i class="fa-solid fa-map" aria-hidden="true"></i>
-            Otevřít v Google Maps
-          </a>
-        </div>
-
-      </div>
-
       <!-- Accommodation card -->
-      <div class="info-card wide">
+      <div class="info-card">
         <h3 class="info-card-title">
           <i class="fa-solid fa-bed" aria-hidden="true"></i>
           Ubytování
         </h3>
         <p class="accom-intro">
-          Pro vaše pohodlí jsme vybrali několik možností ubytování v okolí. Doporučujeme rezervovat co nejdříve.
+          Pro vaše pohodlí jsme zajistili ubytování v <b>Areálu zdraví a sportu</b>.<br> V případě zájmu, vyplňte prosím počet osob ve <b>formuláři níže</b>.
         </p>
         <div class="accom-grid">
 
           <div class="accom-item">
-            <div class="accom-name">Hotel U Zlatého lva</div>
-            <div class="accom-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Náměstí 1, Město — 2 km od místa oslavy</div>
-            <div class="accom-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i> +420 123 456 789</div>
-            <div class="accom-detail"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Při rezervaci uveďte heslo „Klára a Matěj" pro skupinovou slevu.</div>
-          </div>
-
-          <div class="accom-item">
-            <div class="accom-name">Penzion Na Kopci</div>
-            <div class="accom-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Kopecká 42, Město — 3 km od místa oslavy</div>
-            <div class="accom-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i> +420 987 654 321</div>
-            <div class="accom-detail"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Rodinný penzion, snídaně v ceně, volná kapacita 10 pokojů.</div>
-          </div>
-
-          <div class="accom-item">
-            <div class="accom-name">Kemp Zelený háj</div>
-            <div class="accom-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Lesní cesta 5, Město — 1 km od místa oslavy</div>
-            <div class="accom-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i> +420 111 222 333</div>
-            <div class="accom-detail"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Karavany a chatky k dispozici, vhodné pro rodiny s dětmi.</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Dress code card -->
-      <div class="info-card wide">
-        <h3 class="info-card-title">
-          <i class="fa-solid fa-shirt" aria-hidden="true"></i>
-          Dress code
-        </h3>
-        <div class="dresscode-grid">
-
-          <div class="dresscode-item">
-            <div class="dresscode-icon">
-              <i class="fa-solid fa-palette" aria-hidden="true"></i>
+            <div class="accom-item-info">
+              <div class="accom-name">Areál zdraví a sportu Dolní Čermná</div>
+              <div class="accom-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Dolní Čermná 243, 56153 Dolní Čermná, Česko</div>
             </div>
-            <div>
-              <div class="dresscode-label">Téma</div>
-              <div class="dresscode-desc">Zelená — přivítáme všechny odstíny zelené. Ať už šalvějová, olivová, smaragdová nebo mátová.</div>
-            </div>
+            <a
+              href="https://mapy.com/s/povoseculo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="details-map-btn"
+              aria-label="Otevřít ubytování v Mapy.cz"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">map</span>
+            </a>
           </div>
-
-          <div class="dresscode-item">
-            <div class="dresscode-icon">
-              <i class="fa-solid fa-church" aria-hidden="true"></i>
-            </div>
-            <div>
-              <div class="dresscode-label">Obřad v kostele</div>
-              <div class="dresscode-desc">Prosíme o slušné oblečení — zakrytá ramena a kolena.</div>
-            </div>
-          </div>
-
         </div>
       </div>
 
       <!-- Links card -->
       <div class="info-card wide">
         <h3 class="info-card-title">
-          <i class="fa-solid fa-link" aria-hidden="true"></i>
-          Užitečné odkazy
+          Seznam darů
         </h3>
         <div class="link-list">
 
           <!-- Gift registry -->
           <div id="gifts-wrap" class="gifts-wrap">
-            <p class="gifts-desc">Pokud nám chcete udělat radost, vyberte dárek ze seznamu a rezervujte ho svým jménem, aby ho nikdo jiný nevybral.</p>
-            <div id="gifts-list" class="gifts-list"></div>
+            <p class="gifts-desc">
+            Dary pro nás nejsou to nejdůležitější, nicméně si vážíme vaší ochoty nás tímto způsobem potěšit.<br>
+            <br>
+            Připravili jsme proto seznam věcí, které se nám budou hodit do společného života. Budeme rádi, když si z něj vyberete.<br>
+            <br>
+            Abychom předešli budoucím problémům, prosíme o <b>rezervaci</b> vámi vybraného daru.
+            </p>            
+          <div id="gifts-list" class="gifts-list"></div>
           </div>
 
         </div>
@@ -387,7 +327,6 @@
       <h2 class="section-title" id="rsvp-title">Potvrzení <em>účasti</em></h2>
       <p class="section-subtitle" id="rsvp-subtitle">
         Prosíme o potvrzení účasti do <strong>1. června 2026</strong>.
-        Vyplňte prosím formulář níže.
       </p>
     </div>
 
@@ -473,9 +412,51 @@
           >
         </div>
 
+        <!-- Ubytování toggle (shown when attending) -->
+        <div class="form-group accom-toggle-group" id="accom-toggle-group">
+          <span class="form-label" id="accom-label">Potřebujete ubytování?</span>
+          <div class="attendance-toggle" role="radiogroup" aria-labelledby="accom-label">
+            <input type="radio" id="accom-yes" name="ubytovani" value="Ano, potřebuji ubytování">
+            <label for="accom-yes">
+              <i class="fa-solid fa-bed" aria-hidden="true"></i>
+              Ano
+            </label>
+            <input type="radio" id="accom-no" name="ubytovani" value="Ne, ubytování nepotřebuji" checked>
+            <label for="accom-no">
+              Ne
+            </label>
+          </div>
+        </div>
+
+        <!-- Počet na ubytování (shown when accommodation yes) -->
+        <div class="form-group accom-count-group" id="accom-count-group">
+          <label class="form-label" for="rsvp-accom-count">Počet osob na ubytování</label>
+          <input
+            class="form-input"
+            type="number"
+            id="rsvp-accom-count"
+            name="ubytovani_pocet"
+            min="1"
+            max="8"
+            value="1"
+            placeholder="1"
+          >
+        </div>
+
+        <!-- Poznámka k ubytování (shown when accommodation yes) -->
+        <div class="form-group accom-note-group" id="accom-note-group">
+          <label class="form-label" for="rsvp-accom-note">Poznámka k ubytování (nepovinné)</label>
+          <textarea
+            class="form-textarea"
+            id="rsvp-accom-note"
+            name="ubytovani_poznamka"
+            placeholder="Např. potřebuji dětskou postýlku, přijedu v pátek večer…"
+          ></textarea>
+        </div>
+
         <!-- Zpráva / dietní požadavky -->
-        <div class="form-group">
-          <label class="form-label" for="rsvp-message">Dietní požadavky nebo zpráva (nepovinné)</label>
+        <div class="form-group diet-group" id="diet-group">
+          <label class="form-label" for="rsvp-message">Alergie nebo dietní požadavky (nepovinné)</label>
           <textarea
             class="form-textarea"
             id="rsvp-message"

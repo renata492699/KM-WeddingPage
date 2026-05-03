@@ -238,27 +238,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ─── 4. RSVP FORM ─── */
 
-  const rsvpForm      = document.getElementById('rsvp-form');
-  const rsvpSuccess   = document.getElementById('rsvp-success');
-  const rsvpError     = document.getElementById('rsvp-error');
-  const rsvpSubmit    = document.getElementById('rsvp-submit');
-  const rsvpSubtitle  = document.getElementById('rsvp-subtitle');
-  const rsvpAnother   = document.getElementById('rsvp-another');
-  const guestGroup    = document.getElementById('guest-count-group');
-  const emailInput    = document.getElementById('rsvp-email');
-  const replyToHidden = document.getElementById('rsvp-replyto');
+  const rsvpForm       = document.getElementById('rsvp-form');
+  const rsvpSuccess    = document.getElementById('rsvp-success');
+  const rsvpError      = document.getElementById('rsvp-error');
+  const rsvpSubmit     = document.getElementById('rsvp-submit');
+  const rsvpSubtitle   = document.getElementById('rsvp-subtitle');
+  const rsvpAnother    = document.getElementById('rsvp-another');
+  const guestGroup     = document.getElementById('guest-count-group');
+  const accomToggle    = document.getElementById('accom-toggle-group');
+  const accomCount     = document.getElementById('accom-count-group');
+  const accomNote      = document.getElementById('accom-note-group');
+  const dietGroup      = document.getElementById('diet-group');
+  const emailInput     = document.getElementById('rsvp-email');
+  const replyToHidden  = document.getElementById('rsvp-replyto');
 
   // Sync hidden _replyto with email field
   emailInput.addEventListener('input', () => {
     replyToHidden.value = emailInput.value;
   });
 
-  // Show/hide guest count based on attendance
+  function hideAccomDetails() {
+    accomCount.classList.remove('visible');
+    accomNote.classList.remove('visible');
+  }
+
+  // Show/hide guest count + accommodation toggle based on attendance
   document.querySelectorAll('input[name="attendance"]').forEach(radio => {
     radio.addEventListener('change', () => {
       const attending = document.getElementById('att-yes').checked;
       guestGroup.classList.toggle('visible', attending);
       document.getElementById('rsvp-guests').required = attending;
+      accomToggle.classList.toggle('visible', attending);
+      dietGroup.classList.toggle('visible', attending);
+      if (!attending) hideAccomDetails();
+    });
+  });
+
+  // Show/hide accommodation count + note based on accommodation toggle
+  document.querySelectorAll('input[name="ubytovani"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      const needed = document.getElementById('accom-yes').checked;
+      accomCount.classList.toggle('visible', needed);
+      accomNote.classList.toggle('visible', needed);
     });
   });
 
@@ -304,6 +325,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (res.ok) {
         rsvpForm.reset();
         guestGroup.classList.remove('visible');
+        accomToggle.classList.remove('visible');
+        dietGroup.classList.remove('visible');
+        hideAccomDetails();
         rsvpForm.hidden = true;
         rsvpSubtitle.hidden = true;
         rsvpSuccess.hidden = false;

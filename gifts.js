@@ -84,7 +84,7 @@ async function initFirebase() {
 async function loadGifts() {
   giftsList.innerHTML = `
     <div class="gifts-loading">
-      <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+      <span class="material-symbols-outlined ms-spin" aria-hidden="true">progress_activity</span>
       <span>Načítám seznam…</span>
     </div>`;
 
@@ -96,7 +96,7 @@ async function loadGifts() {
   if (!isConfigured) {
     giftsList.innerHTML = `
       <div class="gifts-setup">
-        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+        <span class="material-symbols-outlined" aria-hidden="true">settings</span>
         <p>Firebase zatím není nastaveno.<br>Vyplňte konfiguraci v souboru <code>gifts.js</code>.</p>
       </div>`;
     return;
@@ -105,7 +105,7 @@ async function loadGifts() {
   if (!await initFirebase()) {
     giftsList.innerHTML = `
       <div class="gifts-error">
-        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        <span class="material-symbols-outlined" aria-hidden="true">warning</span>
         <span>Nepodařilo se načíst seznam přání. Zkontrolujte připojení k internetu.</span>
       </div>`;
     return;
@@ -124,7 +124,7 @@ async function loadGifts() {
   } catch {
     giftsList.innerHTML = `
       <div class="gifts-error">
-        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        <span class="material-symbols-outlined" aria-hidden="true">warning</span>
         <span>Nepodařilo se načíst seznam přání.</span>
       </div>`;
   }
@@ -139,7 +139,6 @@ function renderCard(gift) {
   card.dataset.id = gift.id;
 
   card.innerHTML = `
-    <div class="gift-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
     <div class="gift-info">
       ${nameHtml(gift)}
       ${statusHtml(gift)}
@@ -161,14 +160,14 @@ function renderCard(gift) {
 
 function nameHtml(gift) {
   return gift.url
-    ? `<a href="${esc(gift.url)}" target="_blank" rel="noopener noreferrer" class="gift-name">${esc(gift.name)} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>`
+    ? `<a href="${esc(gift.url)}" target="_blank" rel="noopener noreferrer" class="gift-name">${esc(gift.name)} <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>`
     : `<span class="gift-name">${esc(gift.name)}</span>`;
 }
 
 function statusHtml(gift) {
   if (gift.taken) {
     return `<div class="gift-status taken">
-      <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+      <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
       <span>Rezervováno${gift.takenBy ? ` – ${esc(gift.takenBy)}` : ''}</span>
       <button class="btn-unreserve" aria-label="Zrušit rezervaci dárku ${esc(gift.name)}">Zrušit</button>
     </div>`;
@@ -195,7 +194,7 @@ async function reserveGift(gift, card, input, btn) {
 
   btn.disabled   = true;
   input.disabled = true;
-  btn.innerHTML  = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>';
+  btn.innerHTML  = '<span class="material-symbols-outlined ms-spin" aria-hidden="true">progress_activity</span>';
 
   try {
     await _updateDoc(_doc(db, 'gifts', gift.id), { taken: true, takenBy: name });
@@ -205,7 +204,7 @@ async function reserveGift(gift, card, input, btn) {
     card.querySelector('.gift-info').innerHTML = `
       ${nameHtml(gift)}
       <div class="gift-status taken">
-        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+        <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
         <span>Rezervováno – ${esc(name)}</span>
         <button class="btn-unreserve" aria-label="Zrušit rezervaci dárku ${esc(gift.name)}">Zrušit</button>
       </div>`;
@@ -238,7 +237,7 @@ function wireUnreserve(gift, card) {
 function showUnreserveConfirm(gift, card) {
   const status = card.querySelector('.gift-status.taken');
   status.innerHTML = `
-    <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+    <span class="material-symbols-outlined" aria-hidden="true">help</span>
     <span>Opravdu zrušit rezervaci?</span>
     <div class="gift-confirm-btns">
       <button class="btn-confirm-yes">Ano</button>
@@ -251,7 +250,7 @@ function showUnreserveConfirm(gift, card) {
 
 function restoreStatus(gift, card) {
   card.querySelector('.gift-status.taken').innerHTML = `
-    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+    <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
     <span>Rezervováno${gift.takenBy ? ` – ${esc(gift.takenBy)}` : ''}</span>
     <button class="btn-unreserve" aria-label="Zrušit rezervaci dárku ${esc(gift.name)}">Zrušit</button>`;
   wireUnreserve(gift, card);
@@ -260,7 +259,7 @@ function restoreStatus(gift, card) {
 async function unreserveGift(gift, card) {
   const status = card.querySelector('.gift-status.taken');
   status.innerHTML = `
-    <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+    <span class="material-symbols-outlined ms-spin" aria-hidden="true">progress_activity</span>
     <span>Ruším rezervaci…</span>`;
 
   try {
