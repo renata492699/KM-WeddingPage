@@ -19,7 +19,7 @@ const FIREBASE_CONFIG = {
 
 const isConfigured = !FIREBASE_CONFIG.apiKey.startsWith('YOUR_');
 
-const USE_MOCK = true; // set to false to load real data from Firebase
+const USE_MOCK = false; // set to false to load real data from Firebase
 
 /* db and Firestore helpers are loaded lazily on first open */
 let db             = null;
