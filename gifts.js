@@ -44,10 +44,12 @@ function renderGiftData(gifts) {
   const available = gifts.filter(g => !g.taken).length;
   giftsList.innerHTML = '';
 
-  const notice = document.createElement('p');
-  notice.className   = 'gifts-mock-notice';
-  notice.textContent = '⚠ Náhled (testovací data) – otevřete přes server pro načtení skutečného seznamu';
-  giftsList.appendChild(notice);
+  if (USE_MOCK) {
+    const notice = document.createElement('p');
+    notice.className   = 'gifts-mock-notice';
+    notice.textContent = '⚠ Náhled (testovací data) – otevřete přes server pro načtení skutečného seznamu';
+    giftsList.appendChild(notice);
+  }
 
   const counter = document.createElement('p');
   counter.className   = 'gifts-counter';
