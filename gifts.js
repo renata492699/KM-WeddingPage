@@ -168,7 +168,7 @@ function statusHtml(gift) {
   if (gift.taken) {
     return `<div class="gift-status taken">
       <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
-      <span>Rezervováno${gift.takenBy ? ` – ${esc(gift.takenBy)}` : ''}</span>
+      <span>Rezervováno</span>
       <button class="btn-unreserve" aria-label="Zrušit rezervaci dárku ${esc(gift.name)}">Zrušit</button>
     </div>`;
   }
@@ -205,7 +205,7 @@ async function reserveGift(gift, card, input, btn) {
       ${nameHtml(gift)}
       <div class="gift-status taken">
         <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
-        <span>Rezervováno – ${esc(name)}</span>
+        <span>Rezervováno</span>
         <button class="btn-unreserve" aria-label="Zrušit rezervaci dárku ${esc(gift.name)}">Zrušit</button>
       </div>`;
 
@@ -251,7 +251,7 @@ function showUnreserveConfirm(gift, card) {
 function restoreStatus(gift, card) {
   card.querySelector('.gift-status.taken').innerHTML = `
     <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
-    <span>Rezervováno${gift.takenBy ? ` – ${esc(gift.takenBy)}` : ''}</span>
+    <span>Rezervováno</span>
     <button class="btn-unreserve" aria-label="Zrušit rezervaci dárku ${esc(gift.name)}">Zrušit</button>`;
   wireUnreserve(gift, card);
 }
