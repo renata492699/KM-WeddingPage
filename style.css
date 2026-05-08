@@ -143,7 +143,6 @@ a {
 /* ─── Global overflow guard ─── */
 section, nav, footer {
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* ─── Utility ─── */
@@ -677,6 +676,7 @@ section, nav, footer {
   border-radius: var(--radius-lg);
   padding: 36px 32px;
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .info-card.wide {
@@ -1468,7 +1468,7 @@ footer {
 
 @media (max-width: 640px) {
   :root {
-    --section-pad: 72px 16px;
+    --section-pad: 72px 20px;
   }
 
   .nav-links {
