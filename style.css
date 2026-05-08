@@ -116,6 +116,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -124,6 +126,8 @@ body {
   background: var(--white) url('assets/textura_full.jpg') top center / 100% auto repeat-y scroll;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 img {
@@ -134,6 +138,12 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* ─── Global overflow guard ─── */
+section, nav, footer {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ─── Utility ─── */
@@ -269,6 +279,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-ornament {
@@ -322,6 +335,9 @@ a {
   background: var(--white-20);
   border-radius: var(--radius);
   padding: 12px 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .countdown-box {
@@ -886,6 +902,8 @@ a {
   line-height: 1.55;
   display: flex;
   gap: 8px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .accom-detail i {
@@ -921,6 +939,12 @@ a {
   background: var(--sage-light);
   border-radius: var(--radius);
   padding: 18px 16px;
+}
+
+.dresscode-item > div:not(.dresscode-icon) {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .dresscode-icon {
@@ -1444,7 +1468,7 @@ footer {
 
 @media (max-width: 640px) {
   :root {
-    --section-pad: 72px 20px;
+    --section-pad: 72px 16px;
   }
 
   .nav-links {
@@ -1494,16 +1518,18 @@ footer {
   }
 
   .countdown {
-    gap: 10px;
+    gap: 0;
+    padding: 10px 12px;
   }
 
   .countdown-box {
-    min-width: 68px;
-    padding: 14px 12px 10px;
+    min-width: 0;
+    flex: 1 1 60px;
+    padding: 10px 8px;
   }
 
   .countdown-number {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 
   .attendance-toggle {
@@ -1513,22 +1539,58 @@ footer {
   .info-card {
     padding: 28px 22px;
   }
+
+  .info-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
 }
 
 @media (max-width: 400px) {
   .countdown-box {
-    min-width: 58px;
-    padding: 12px 8px 8px;
+    min-width: 0;
+    flex: 1 1 50px;
+    padding: 8px 4px;
   }
   .countdown-number {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .info-card {
+    padding: 20px 14px;
+  }
+
+  .info-card-title {
+    font-size: 1.1rem;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .timeline-dot {
+    margin-left: 8px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    left: 18px;
+  }
+
+  .dresscode-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .accom-name {
+    font-size: 0.97rem;
   }
 }
 
 @media (max-width: 768px) {
   body {
     background-image: url('assets/textura_výsek.jpg');
-    background-size: 200% auto;
+    background-size: 100% auto;
     background-repeat: repeat-y;
     background-position: center top;
   }
@@ -1828,10 +1890,28 @@ a.gift-name .material-symbols-outlined {
 }
 
 /* ─── Responsive ─── */
-@media (max-width: 480px) {
+@media (max-width: 560px) {
+  .gift-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
 
-  .btn-reserve {
+  .gift-name {
+    white-space: normal;
+  }
+
+  .gift-reserve-form {
     width: 100%;
-    padding: 9px;
+  }
+
+  .gift-name-input {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .gift-status.taken {
+    width: 100%;
   }
 }
