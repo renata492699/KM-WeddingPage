@@ -1515,6 +1515,12 @@ footer {
     justify-content: center;
   }
 
+  #home {
+    height: 50vh;
+    min-height: 360px;
+    padding-top: var(--nav-h);
+  }
+
   .hero-names {
     font-size: clamp(2.6rem, 12vw, 3.8rem);
   }
