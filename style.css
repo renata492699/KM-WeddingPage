@@ -1546,8 +1546,6 @@ footer {
     margin-top: 3px;
   }
 
-  .label-long { display: none; }
-  .label-short { display: inline; }
 
   .attendance-toggle {
     grid-template-columns: 1fr;
@@ -1564,9 +1562,20 @@ footer {
 }
 
 @media (max-width: 400px) {
+  .countdown {
+    padding: 6px 8px;
+  }
+
+  .countdown-box {
+    padding: 6px 6px;
+  }
+
   .countdown-number {
     font-size: 1rem;
   }
+
+  .label-long { display: none; }
+  .label-short { display: inline; }
 }
 
 @media (max-width: 420px) {
