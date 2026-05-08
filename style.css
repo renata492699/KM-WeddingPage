@@ -379,6 +379,8 @@ section, nav, footer {
   margin-top: 6px;
 }
 
+.label-short { display: none; }
+
 /* Scroll chevron */
 .hero-scroll {
   position: absolute;
@@ -1519,23 +1521,27 @@ footer {
 
   .countdown {
     gap: 0;
-    padding: 10px 12px;
+    padding: 8px 10px;
+    flex-wrap: nowrap;
   }
 
   .countdown-box {
+    flex: 1;
     min-width: 0;
-    flex: 1 1 60px;
-    padding: 10px 8px;
+    padding: 8px 10px;
   }
 
   .countdown-number {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .countdown-label {
-    font-size: 0.58rem;
-    margin-top: 4px;
+    font-size: 0.55rem;
+    margin-top: 3px;
   }
+
+  .label-long { display: none; }
+  .label-short { display: inline; }
 
   .attendance-toggle {
     grid-template-columns: 1fr;
@@ -1552,13 +1558,8 @@ footer {
 }
 
 @media (max-width: 400px) {
-  .countdown-box {
-    min-width: 0;
-    flex: 1 1 50px;
-    padding: 8px 4px;
-  }
   .countdown-number {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
