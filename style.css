@@ -287,7 +287,7 @@ section, nav, footer {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1rem;
-  color: var(--white-65);
+  color: var(--white);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
@@ -334,7 +334,6 @@ section, nav, footer {
   background: var(--white-20);
   border-radius: var(--radius);
   padding: 12px 20px;
-  width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -1110,6 +1109,7 @@ button.link-item {
   padding: 14px 12px;
   border-radius: 8px;
   border: 1.5px solid var(--sage-a35);
+  background: var(--white);
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
@@ -1529,7 +1529,12 @@ footer {
   }
 
   .countdown-number {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+  }
+
+  .countdown-label {
+    font-size: 0.58rem;
+    margin-top: 4px;
   }
 
   .attendance-toggle {
@@ -1553,7 +1558,7 @@ footer {
     padding: 8px 4px;
   }
   .countdown-number {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
