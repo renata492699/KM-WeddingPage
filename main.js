@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   hamburger.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
     hamburger.setAttribute('aria-expanded', String(open));
-    hamburger.querySelector('i').className = open
-      ? 'fa-solid fa-xmark'
-      : 'fa-solid fa-bars';
+    hamburger.querySelector('span').textContent = open ? 'close' : 'menu';
   });
 
   // Close mobile menu when a link is clicked
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.querySelector('i').className = 'fa-solid fa-bars';
+      hamburger.querySelector('span').textContent = 'menu';
     });
   });
 

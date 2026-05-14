@@ -33,10 +33,11 @@
       <li><a href="#rsvp">Potvrdit účast</a></li>
       <li><a href="#gifts">Seznam darů</a></li>
       <li><a href="#couple">Nevěsta a ženich</a></li>
+      <li><a href="#contacts">Důležité kontakty</a></li>
     </ul>
 
     <button class="nav-hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-links">
-      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <span class="material-symbols-outlined" aria-hidden="true">menu</span>
     </button>
   </nav>
 
@@ -98,29 +99,27 @@
   <section id="details" aria-labelledby="details-title">
 
     <!-- Title row -->
-    <h2 class="section-title details-heading" id="details-title">Budeme rádi, když náš <em>velký den</em> spolu s námi oslavíte</h2>
+    <h2 class="section-title details-heading" id="details-title">Budeme rádi, když náš <em>velký den</em> spolu s&nbsp;námi&nbsp;oslavíte</h2>
 
-    <!-- When + Where row -->
-    <div class="details-grid">
-
-      <!-- When -->
-      <div class="details-when">
-        <div class="details-when-label">
-          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-          Kdy
-        </div>
-        <div class="details-when-box">
-          <div class="details-when-value">13. června 2026</div>
-          <div class="details-when-sub">Sobota</div>
-        </div>
+    <!-- When -->
+    <div class="details-when">
+      <div class="details-when-label">
+        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+        Kdy
       </div>
+      <div class="details-when-box">
+        <div class="details-when-value">13. června 2026</div>
+        <div class="details-when-sub">Sobota</div>
+      </div>
+    </div>
 
-      <!-- Where -->
-      <div class="details-where">
-        <div class="details-where-label">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-          Kde
-        </div>
+    <!-- Where -->
+    <div class="details-where">
+      <div class="details-where-label">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        Kde
+      </div>
+      <div class="details-places-row">
 
         <!-- Place 1 – ceremony -->
         <div class="details-place">
@@ -138,7 +137,7 @@
           >
             <span class="material-symbols-outlined" aria-hidden="true">map</span>
           </a>
-          <p class="details-place-note">Prosíme všechny svatebčany, aby pro parkování využili veřejného parkoviště - přímo u kostela máme vyhrazeno pouze několik parkovacích míst pro nejbližší rodinu ženicha a nevěsty. Ve směru od Bartošovic v Orlických horách projeďte “centrem” Neratova po hlavní silnici, poté před výjezdem z obce odbočte vlevo.</p>
+          <p class="details-place-note">Prosíme všechny svatebčany, aby pro parkování využili veřejného parkoviště - přímo u kostela máme vyhrazeno pouze několik parkovacích míst pro nejbližší rodinu ženicha a nevěsty. Ve směru od Bartošovic v Orlických horách projeďte "centrem" Neratova po hlavní silnici, poté před výjezdem z obce odbočte vlevo.</p>
         </div>
 
         <!-- Place 2 – party -->
@@ -160,7 +159,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -190,7 +188,7 @@
             </div>
             <div>
               <div class="dresscode-label">Obřad v kostele</div>
-              <div class="dresscode-desc">Prosíme o slušné oblečení — zakrytá ramena a kolena.</div>
+              <div class="dresscode-desc">Budeme moc rádi, když pro obřad v kostele zvolíte vhodné a slavnostní oblečení odpovídající prostředí kostela.</div>
             </div>
           </div>
 
@@ -199,8 +197,8 @@
               <span class="material-symbols-outlined" aria-hidden="true">eco</span>
             </div>
             <div>
-              <div class="dresscode-label">Téma</div>
-              <div class="dresscode-desc">Sage — a jakékoliv jiné odstíny zelené.</div>
+              <div class="dresscode-label">Barvy svatby</div>
+              <div class="dresscode-desc">Odstíny zelené - sage green, eukalyptová, šalvějová, …</div>
             </div>
           </div>
 
@@ -208,7 +206,7 @@
       </div>
 
       <!-- Schedule card -->
-      <div class="info-card">
+      <div class="info-card tall">
         <h3 class="info-card-title">
           <i class="fa-regular fa-clock" aria-hidden="true"></i>
           Harmonogram dne
@@ -220,7 +218,7 @@
               <div class="timeline-time">10:30</div>
               <div class="timeline-event">
                 <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
-                Občerstvení svatebčanů (u Orlovny)
+                Občerstvení svatebčanů (u&nbsp;Orlovny)
               </div>
             </div>
           </div>
@@ -267,6 +265,15 @@
         </div>
       </div>
 
+      <!-- Before ceremony card -->
+      <div class="info-card">
+        <h3 class="info-card-title">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          Před obřadem
+        </h3>
+        <p class="accom-intro">Pro všechny svatebčany bude od 10:30 v místě konání hostiny možnost občerstvení. Bude se zde také připravovat svatební kolona. Je však zcela na vás, zda se k nám připojíte již dopoledne, nebo dorazíte až na samotný obřad.</p>
+      </div>
+
       <!-- Accommodation card -->
       <div class="info-card">
         <h3 class="info-card-title">
@@ -274,7 +281,7 @@
           Ubytování
         </h3>
         <p class="accom-intro">
-          Pro vaše pohodlí jsme zajistili ubytování v <b>Areálu zdraví a sportu</b>.<br> V případě zájmu, vyplňte prosím počet osob ve <b>formuláři níže</b>.
+          Pro ty z Vás, kteří nejste z našich končin, jsme zajistili ubytování v <b>Areálu zdraví a sportu</b> přímo v Dolní Čermné.<br> V případě zájmu o ubytování, vyplňte prosím <b>formulář uvedený níže</b>.
         </p>
         <div class="accom-grid">
 
@@ -306,7 +313,7 @@
     <div class="section-header">
       <h2 class="section-title" id="rsvp-title">Dejte nám vědět, jestli <em>dorazíte</em></h2>
       <p class="section-subtitle" id="rsvp-subtitle">
-        Prosíme o potvrzení účasti do <strong>1. června 2026</strong>.
+        Prosíme o potvrzení účasti do <strong>1.&nbsp;června&nbsp;2026</strong>.
       </p>
     </div>
 
@@ -489,11 +496,13 @@
     <div class="gifts-container">
       <div id="gifts-wrap" class="gifts-wrap">
         <p class="gifts-desc">
-          Dary pro nás nejsou to nejdůležitější, nicméně si vážíme vaší ochoty nás tímto způsobem potěšit.<br>
-          <br>
-          Připravili jsme proto seznam věcí, které se nám budou hodit do společného života. Budeme rádi, když si z něj vyberete.<br>
-          <br>
-          Abychom předešli budoucím problémům, prosíme o <b>rezervaci</b> vámi vybraného daru.
+Největším darem pro nás bude, když s námi prožijete náš svatební den, přijdete v dobré náladě a společně si ho všichni užijeme ve&nbsp;zdraví&nbsp;a&nbsp;pohodě.
+        </p>
+        <p class="gifts-desc">
+Pokud byste nám přesto chtěli udělat radost svatebním darem, budeme vděční za jakýkoliv finanční příspěvek, který bychom využili na&nbsp;dozařízení našeho společného bydlení.
+        </p>
+        <p class="gifts-desc">
+Pro ty z Vás, kteří preferují hmotné dary, jsme pro inspiraci připravili seznam konkrétních věcí, které by se nám hodily. Najdete zde také odkazy s odkazy pro inspiraci. Dary je možné si níže rezervovat.
         </p>
         <div id="gifts-list" class="gifts-list"></div>
       </div>
@@ -528,7 +537,7 @@
         <h3 class="couple-name">Klára</h3>
         <p class="couple-bio">
           <!-- Krátký text o nevěstě — pár vět -->
-          Krátké představení nevěsty.
+          Klárka zvládá téměř všechno: zazpívat, upéct skvělý dort, rozesmát lidi kolem sebe a ještě uběhnout půl maraton. Dokončuje studium pedagogiky ale kdykoliv to jde, volné chvíle tráví s Matějem a se svými blízkými. A jestli ji chcete udělat radost, stačí i obyčejná slunečnice, ty totiž Klárka úplně zbožňuje.
         </p>
       </div>
 
@@ -549,7 +558,7 @@
         <h3 class="couple-name">Matěj</h3>
         <p class="couple-bio">
           <!-- Krátký text o ženichovi — pár vět -->
-          Krátké představení ženicha.
+          Matěj je důkazem, že i právník může být zábavný člověk. Navíc do všeho, co dělá, dává maximum. Když zrovna neřeší paragrafy, pravděpodobně sportuje. Ale nenechá si ujít ani sledování hokeje, fotbalu nebo biatlonu. Rád tráví čas v přírodě, nejlépe s Klárkou. A pokud mu chcete udělat radost, tak mu určitě nenabízejte žemlovku, ale půllitr tankové plzně.
         </p>
       </div>
 
@@ -617,6 +626,68 @@
       <figure tabindex="0" role="button" aria-label="Fotografie 9">
         <img src="assets/gallery/foto-9-v.jpg" alt="Společné foto 9" loading="lazy">
       </figure>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CONTACTS
+  ══════════════════════════════════════ -->
+  <section id="contacts" aria-labelledby="contacts-title">
+    <div class="section-header">
+      <h2 class="section-title" id="contacts-title">Důležité <em>kontakty</em></h2>
+    </div>
+
+    <div class="contacts-grid">
+
+      <div class="contact-card">
+        <div class="contact-avatar">
+          <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        </div>
+        <div class="contact-info">
+          <div class="contact-name">Kuba Moravec</div>
+          <div class="contact-role">Svatební koordinátor</div>
+          <p class="contact-desc">Náš dlouholetý kamarád a spolužák, který rozhodně nepatří mezi stydlíny. Na Kubíka se můžete obrátit s čímkoliv ohledně svatby. Kromě toho, že bude dohlížet nad chodem našeho velkého dne, bude mít na starosti také zábavu. Proto se na něj neváhejte obrátit, pokud budete mít zájem obohatit náš den nějakou tou srandou.</p>
+          <p class="contact-phone">Tel.: 721&nbsp;559&nbsp;633</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-avatar">
+          <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        </div>
+        <div class="contact-info">
+          <div class="contact-name">Renďa Urbanová</div>
+          <div class="contact-role">Družička</div>
+          <p class="contact-desc">Nenechte se zmást její výškou! Neodpovídá totiž tomu, kolik toho tahle holka umí! Bez Rendi bychom neměli webové stránky a spoustu dalšího. Můžete se na ni obrátit s jakýmikoliv dotazy ohledně svatebních darů nebo pokud máte chuť přidat pomocnou ruku při chystání sálu.</p>
+          <p class="contact-phone">Tel.: 602&nbsp;475&nbsp;542</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-avatar">
+          <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        </div>
+        <div class="contact-info">
+          <div class="contact-name">Kuba Hermann</div>
+          <div class="contact-role">Svědek ženicha</div>
+          <p class="contact-desc">Nejhodnější, nejoblíbenější a zároveň jediný bratr ženicha. Kuba je ten pravý člověk, na koho se obrátit, když si nebudete vědět rady s cestou na obřad nebo na místo hostiny&nbsp;— přeci jen je to geoinformatik. V náš den "D" bude zároveň pečovat o pohodlí ženicha, proto jakékoliv dotazy ohledně Matěje směřujte právě na něj.</p>
+          <p class="contact-phone">Tel.: 728&nbsp;490&nbsp;458</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-avatar">
+          <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        </div>
+        <div class="contact-info">
+          <div class="contact-name">Kuba Macháček</div>
+          <div class="contact-role">Svědek nevěsty</div>
+          <p class="contact-desc">Ano, také nevěsta má svého Kubu&nbsp;— pana inženýra a dokonce promovaného! Tohoto úžasného bubeníka v náš velký den výjimečně nenajdete za bicí soupravou, ale bude stát po boku nevěsty jako její svědek. Případné dotazy, nejen ohledně Klárky, směřujte právě na Kubu, určitě Vám rád s čímkoliv poradí.</p>
+          <p class="contact-phone">Tel.: 604&nbsp;571&nbsp;686</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
