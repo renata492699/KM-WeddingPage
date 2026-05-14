@@ -31,6 +31,7 @@
       <li><a href="#home" class="active" aria-current="page">Domů</a></li>
       <li><a href="#details">Informace</a></li>
       <li><a href="#rsvp">Potvrdit účast</a></li>
+      <li><a href="#gifts">Seznam darů</a></li>
       <li><a href="#couple">Nevěsta a ženich</a></li>
     </ul>
 
@@ -110,7 +111,7 @@
         </div>
         <div class="details-when-box">
           <div class="details-when-value">13. června 2026</div>
-          <div class="details-when-sub">Sobota &nbsp;·&nbsp; začínáme ve 14:00</div>
+          <div class="details-when-sub">Sobota</div>
         </div>
       </div>
 
@@ -137,6 +138,7 @@
           >
             <span class="material-symbols-outlined" aria-hidden="true">map</span>
           </a>
+          <p class="details-place-note">Prosíme všechny svatebčany, aby pro parkování využili veřejného parkoviště - přímo u kostela máme vyhrazeno pouze několik parkovacích míst pro nejbližší rodinu ženicha a nevěsty. Ve směru od Bartošovic v Orlických horách projeďte “centrem” Neratova po hlavní silnici, poté před výjezdem z obce odbočte vlevo.</p>
         </div>
 
         <!-- Place 2 – party -->
@@ -179,6 +181,7 @@
           <i class="fa-solid fa-shirt" aria-hidden="true"></i>
           Dress code
         </h3>
+        <p class="dresscode-intro">Na dress codu či barevném sladění hostů netrváme. Důležité pro nás je, aby se každý z Vás během našeho dne cítil dobře a pohodlně.</p>
         <div class="dresscode-grid">
 
           <div class="dresscode-item">
@@ -292,29 +295,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Links card -->
-      <div class="info-card wide">
-        <h3 class="info-card-title">
-          Seznam darů
-        </h3>
-        <div class="link-list">
-
-          <!-- Gift registry -->
-          <div id="gifts-wrap" class="gifts-wrap">
-            <p class="gifts-desc">
-            Dary pro nás nejsou to nejdůležitější, nicméně si vážíme vaší ochoty nás tímto způsobem potěšit.<br>
-            <br>
-            Připravili jsme proto seznam věcí, které se nám budou hodit do společného života. Budeme rádi, když si z něj vyberete.<br>
-            <br>
-            Abychom předešli budoucím problémům, prosíme o <b>rezervaci</b> vámi vybraného daru.
-            </p>            
-          <div id="gifts-list" class="gifts-list"></div>
-          </div>
-
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -499,6 +479,29 @@
 
 
   <!-- ══════════════════════════════════════
+       GIFTS
+  ══════════════════════════════════════ -->
+  <section id="gifts" aria-labelledby="gifts-title">
+    <div class="section-header text-center">
+      <h2 class="section-title" id="gifts-title">Seznam <em>darů</em></h2>
+    </div>
+
+    <div class="gifts-container">
+      <div id="gifts-wrap" class="gifts-wrap">
+        <p class="gifts-desc">
+          Dary pro nás nejsou to nejdůležitější, nicméně si vážíme vaší ochoty nás tímto způsobem potěšit.<br>
+          <br>
+          Připravili jsme proto seznam věcí, které se nám budou hodit do společného života. Budeme rádi, když si z něj vyberete.<br>
+          <br>
+          Abychom předešli budoucím problémům, prosíme o <b>rezervaci</b> vámi vybraného daru.
+        </p>
+        <div id="gifts-list" class="gifts-list"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
        BRIDE & GROOM
   ══════════════════════════════════════ -->
   <section id="couple" aria-labelledby="couple-title">
@@ -537,7 +540,7 @@
             Nahraďte src za cestu k fotografii, např. assets/matej.jpg
           -->
           <img
-            src="assets/gallery/groom_v.jpg"
+            src="assets/gallery/groom.jpeg"
             alt="Fotografie ženicha Matěje"
             class="couple-photo"
             loading="lazy"
@@ -574,36 +577,46 @@
          3. Smažte tuto sekci komentářů
     ────────────────────────────────────────────────────────────────── -->
     <div class="gallery-grid" id="gallery-grid">
-        <figure tabindex="0" role="button" aria-label="Fotografie 1">
-          <img src="assets/gallery/foto-1.JPG" alt="Společné foto 1" loading="lazy">
-        </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 1">
+        <img src="assets/gallery/foto-1.JPG" alt="Společné foto 1" loading="lazy">
+      </figure>
       <figure tabindex="0" role="button" aria-label="Fotografie 2 — přejeďte myší pro živou verzi" class="live-photo">
-          <img src="assets/gallery/foto-2.JPEG" alt="Společné foto 2" loading="lazy">
-          <video
-            src="assets/gallery/video-2.MOV"
-            muted
-            loop
-            playsinline
-            preload="none"
-            aria-hidden="true"
-          ></video>
-          <span class="live-badge" aria-hidden="true">
-            <i class="fa-solid fa-circle-play"></i> LIVE
-          </span>
-        </figure>
-        <figure tabindex="0" role="button" aria-label="Fotografie 3">
-          <img src="assets/gallery/foto-3.JPG" alt="Společné foto 3" loading="lazy">
-        </figure>
-       <figure tabindex="0" role="button" aria-label="Fotografie 4">
-          <img src="assets/gallery/foto-4.JPG" alt="Společné foto 4" loading="lazy">
-        </figure>
-       <figure tabindex="0" role="button" aria-label="Fotografie 5">
-          <img src="assets/gallery/foto-5.jpg" alt="Společné foto 5" loading="lazy">
-        </figure>
-      <div class="gallery-placeholder" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Fotografie přijdou brzy</span>
-      </div>
+        <img src="assets/gallery/foto-2.JPEG" alt="Společné foto 2" loading="lazy">
+        <video src="assets/gallery/video-2.MOV" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="live-badge" aria-hidden="true"><i class="fa-solid fa-circle-play"></i> LIVE</span>
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 3">
+        <img src="assets/gallery/foto-3.JPEG" alt="Společné foto 3" loading="lazy">
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 10">
+        <img src="assets/gallery/foto-10.JPEG" alt="Společné foto 10" loading="lazy">
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 4 — přejeďte myší pro živou verzi" class="live-photo">
+        <img src="assets/gallery/foto-4.JPEG" alt="Společné foto 4" loading="lazy">
+        <video src="assets/gallery/video-4.MOV" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="live-badge" aria-hidden="true"><i class="fa-solid fa-circle-play"></i> LIVE</span>
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 7 — přejeďte myší pro živou verzi" class="live-photo">
+        <img src="assets/gallery/foto-7.jpg" alt="Společné foto 7" loading="lazy">
+        <video src="assets/gallery/video-7.MOV" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="live-badge" aria-hidden="true"><i class="fa-solid fa-circle-play"></i> LIVE</span>
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 6 — přejeďte myší pro živou verzi" class="live-photo">
+        <img src="assets/gallery/foto-6.JPEG" alt="Společné foto 6" loading="lazy">
+        <video src="assets/gallery/foto-6.MOV" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="live-badge" aria-hidden="true"><i class="fa-solid fa-circle-play"></i> LIVE</span>
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 5">
+        <img src="assets/gallery/foto-5.JPEG" alt="Společné foto 5" loading="lazy">
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 8 — přejeďte myší pro živou verzi" class="live-photo">
+        <img src="assets/gallery/foto-8.jpg" alt="Společné foto 8" loading="lazy">
+        <video src="assets/gallery/video-8.MOV" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="live-badge" aria-hidden="true"><i class="fa-solid fa-circle-play"></i> LIVE</span>
+      </figure>
+      <figure tabindex="0" role="button" aria-label="Fotografie 9">
+        <img src="assets/gallery/foto-9-v.jpg" alt="Společné foto 9" loading="lazy">
+      </figure>
     </div>
   </section>
 
