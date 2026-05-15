@@ -431,8 +431,7 @@ section, nav, footer {
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 28px;
-  padding-top: 20px;
+  padding: 20px 28px 28px;
 }
 
 .couple-photo-wrap {
@@ -724,7 +723,6 @@ section, nav, footer {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .info-card-title i {
@@ -890,7 +888,6 @@ section, nav, footer {
   color: var(--text-muted);
   margin-bottom: 24px;
   line-height: 1.7;
-  padding-left: 10px;
 }
 
 .accom-grid {
@@ -1329,7 +1326,7 @@ button.link-item {
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 28px 28px 24px;
+  padding: 28px;
   display: flex;
   gap: 20px;
 }
@@ -1530,7 +1527,7 @@ footer {
   background: var(--sage-light);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 24px;
+  padding: 28px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1699,7 +1696,7 @@ footer {
   }
 
   .info-card {
-    padding: 28px 22px;
+    padding: 28px;
   }
 
   .info-card-title {
@@ -1727,7 +1724,7 @@ footer {
 
 @media (max-width: 420px) {
   .info-card {
-    padding: 20px 14px;
+    padding: 20px;
   }
 
   .info-card-title {
