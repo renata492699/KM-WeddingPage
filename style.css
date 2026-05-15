@@ -1394,6 +1394,16 @@ button.link-item {
   .contacts-grid {
     grid-template-columns: 1fr;
   }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-phone {
+    text-align: center;
+  }
 }
 
 /* ─── Footer ─── */
