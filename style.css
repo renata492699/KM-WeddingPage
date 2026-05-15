@@ -2087,6 +2087,7 @@ a.gift-name .material-symbols-outlined {
 
   .gift-name {
     white-space: normal;
+    font-size: 0.82rem;
   }
 
   .gift-reserve-form {
