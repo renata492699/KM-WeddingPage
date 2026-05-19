@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ─── 2. COUNTDOWN ─── */
 
   // *** Změňte datum a čas vaší svatby ***
-  const WEDDING_DATE = new Date('2026-06-13T15:00:00');
+  const WEDDING_DATE = new Date('2026-06-13T14:00:00');
 
   const cdDays    = document.getElementById('cd-days');
   const cdHours   = document.getElementById('cd-hours');
